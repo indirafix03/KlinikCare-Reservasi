@@ -57,5 +57,7 @@ Route::middleware('auth')->group(function () {
         Route::post('/reservasis/{reservasi}/confirm', [AdminReservasiController::class, 'confirm'])->name('reservasis.confirm');
         Route::post('/reservasis/{reservasi}/cancel', [AdminReservasiController::class, 'cancel'])->name('reservasis.cancel');
         Route::post('/reservasis/{reservasi}/complete', [AdminReservasiController::class, 'complete'])->name('reservasis.complete');
+        Route::get('/admin/dokters/create', [DokterController::class, 'create'])->name('admin.dokters.create');
+        Route::post('/admin/dokters', [DokterController::class, 'store'])->name('admin.dokters.store');
     });
 });
